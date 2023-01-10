@@ -29,15 +29,19 @@
     <div class="container" id="root">
         <div id="carousel">
             <div class="gallery">
-                <img v-for="(pic, i) in pictures" :src="pic.image" :alt="pic.title" :class="i === currentIndex ? 'active' : '' ">
 
-                <div class="text">
-                    <h1></h1>
-                    <h3></h3>
-                </div>
+                <figure v-for="(pic, i) in pictures" v-show="i === currentIndex">
+
+                    <img  :src="pic.image" :alt="pic.title" >
+                    <figcaption class="text">
+                        <h1 >{{ pic.title }}</h1>
+                        <h3 v-text="pic.text"></h3>
+                    </figcaption>
+
+                </figure>
             </div>
-            <i id="prev" class="fa-solid fa-arrow-left"></i>
-            <i id="next" class="fa-solid fa-arrow-right"></i>
+            <i  id="prev" class="fa-solid fa-arrow-left" @click="goTo('prev')"></i>
+            <i  id="next" class="fa-solid fa-arrow-right" @click="goTo('next')"></i>
 
             
         </div>

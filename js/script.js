@@ -29,6 +29,18 @@ const pictures = [
         return{
             currentIndex: 0, pictures
         }
+    },
+    computed;
+    methods: {
+        goTo(target){
+            if (target === 'next'){
+                this.currentIndex++;
+                console.log(this.currentIndex++)
+            } else {
+                this.currentIndex--;
+                onsole.log(this.currentIndex--)
+            }
+        }
     }
   })
 
