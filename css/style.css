@@ -6,6 +6,7 @@
 body{
     font-family: sans-serif;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.703);
 }
 .container{
     max-width: 1200px;
