@@ -37,15 +37,14 @@ const pictures = [
         goTo(target){
             if (target === 'next'){
                 this.currentIndex++;
-                console.log(this.currentIndex);
+                if( this.currentIndex === pictures.length -1){
+                    this.currentIndex = 0;
+                }
             } else {
                 this.currentIndex--;
-            }
-        },
-        lastPic(){
-            
-            if( currentIndex === pictures.length -1){
-                this.currentIndex = 0;
+                if( this.currentIndex < 0 ){
+                    this.currentIndex = pictures.length -1;
+                }
             }
         }
     }
