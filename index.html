@@ -26,14 +26,22 @@
 
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="root">
         <div id="carousel">
             <div class="gallery">
-<div class="row"></div>
+                <img v-for="(pic, i) in pictures" :src="pic.image" :alt="pic.title" :class="i === currentIndex ? 'active' : '' ">
+
+                <div class="text">
+                    <h1></h1>
+                    <h3></h3>
+                </div>
             </div>
             <i id="prev" class="fa-solid fa-arrow-left"></i>
             <i id="next" class="fa-solid fa-arrow-right"></i>
+
+            
         </div>
+        <div id="thumbnails"></div>
     </div>
 </body>
 </html>
